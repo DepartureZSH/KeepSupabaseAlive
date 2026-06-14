@@ -24,8 +24,9 @@ jobs:
 
       - name: Run Supabase keep-alive script
         env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          SUPABASE_ANON_KEY_1: ${{ secrets.SUPABASE_ANON_KEY_1 }}
+          SUPABASE_ANON_KEY_2: ${{ secrets.SUPABASE_ANON_KEY_2 }}
+          SUPABASE_ANON_KEY_3: ${{ secrets.SUPABASE_ANON_KEY_3 }}
         run: bun run keep-alive
 
       - name: Print finish time
