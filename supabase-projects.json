@@ -1,19 +1,14 @@
 {
   "projects": [
     {
-      "name": "Project 1",
+      "name": "TimetablPlatform",
       "url": "https://mmctklvjemvtjeinlrkw.supabase.co",
       "anonKeyEnvVar": "SUPABASE_ANON_KEY_1"
     },
     {
-      "name": "Project 2",
-      "url": "https://your-second-project.supabase.co",
+      "name": "Bacchus",
+      "url": "https://yvdzptghhwgpbvmjghaj.supabase.co",
       "anonKeyEnvVar": "SUPABASE_ANON_KEY_2"
-    },
-    {
-      "name": "Project 3",
-      "url": "https://your-third-project.supabase.co",
-      "anonKeyEnvVar": "SUPABASE_ANON_KEY_3"
     }
   ]
 }
