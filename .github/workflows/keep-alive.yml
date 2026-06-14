@@ -1,0 +1,33 @@
+name: Keep Supabase Alive
+
+on:
+  schedule:
+    # 北京时间每天 08:00 = UTC 00:00
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Run Supabase keep-alive script
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+        run: bun run keep-alive
+
+      - name: Print finish time
+        if: always()
+        run: echo "Keep-alive finished at $(date -u '+%Y-%m-%d %H:%M:%S UTC')"

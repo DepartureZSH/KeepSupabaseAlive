@@ -1,0 +1,14 @@
+{
+  "name": "keep-supabase-alive",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "keep-alive": "bun run scripts/keep-alive.ts"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.76.1"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.22"
+  }
+}
